@@ -1,7 +1,7 @@
 # openclip
 
 <p align="center">
-  <img src="./assets/openclip-app-icon.jpg" alt="openclip icon" width="72" />
+  <img src="./assets/openclip-app-icon-v2.jpg" alt="openclip icon" width="72" />
 </p>
 
 <p align="center"><strong>openclip</strong></p>
