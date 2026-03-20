@@ -7,7 +7,7 @@ A lightweight macOS clipboard history app with a bottom-edge picker, keyboard-fi
 Repo: https://github.com/zeningc/openclip
 
 <p align="left">
-  <img src="./assets/openclip-app-icon.jpg" alt="openclip icon" width="220" />
+  <img src="./assets/openclip-app-icon.jpg" alt="openclip icon" width="140" />
 </p>
 
 ## English
@@ -30,16 +30,6 @@ It watches your clipboard, keeps a searchable local history, and lets you quickl
 - Retention controls by item count, age, and total storage size
 - UI language option: **English / 中文**
 - Local-only data storage
-
-### Screenshots
-
-#### Picker UI
-
-![openclip picker](./screenshots/openclip-panel.png)
-
-#### Settings
-
-![openclip settings](./screenshots/openclip-settings.png)
 
 ### Installation
 
@@ -79,6 +69,7 @@ History is stored locally at:
 - openclip behaves like a menu bar utility instead of a normal Dock app.
 - Duplicate consecutive clipboard entries are ignored.
 - Image entries are stored as TIFF data, so retention limits matter for disk usage.
+- README screenshots are being refreshed; the release zip and source code are the current canonical artifacts.
 
 ---
 
@@ -102,16 +93,6 @@ openclip 是一个面向 macOS 的轻量级剪贴板历史工具，基于 SwiftU
 - 支持按数量、天数、总容量自动清理历史
 - 支持 **英文 / 中文** 界面切换
 - 所有数据仅保存在本地
-
-### 截图
-
-#### 历史面板
-
-![openclip picker zh](./screenshots/openclip-panel.png)
-
-#### 设置界面
-
-![openclip settings zh](./screenshots/openclip-settings.png)
 
 ### 安装方式
 
@@ -151,3 +132,4 @@ swift run openclip
 - openclip 更像菜单栏工具，而不是普通 Dock 应用。
 - 连续重复复制的内容会被忽略，不会重复入库。
 - 图片以 TIFF 形式保存，因此历史容量上限对磁盘占用很重要。
+- README 截图正在重新整理，目前以 release 压缩包和源码为准。
