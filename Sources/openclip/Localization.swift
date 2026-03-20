@@ -32,6 +32,9 @@ struct L10n {
         case (.english, .clearHistory): format = "Clear History"
         case (.chinese, .clearHistory): format = "清空历史"
 
+        case (.english, .quit): format = "Quit openclip"
+        case (.chinese, .quit): format = "退出 openclip"
+
         case (.english, .storedItems): format = "Stored: %d items"
         case (.chinese, .storedItems): format = "已存储：%d 条"
 
@@ -88,7 +91,7 @@ struct L10n {
     }
 
     enum Key {
-        case hotkey, openClipboardHistory, settings, clearHistory, storedItems
+        case hotkey, openClipboardHistory, settings, clearHistory, quit, storedItems
         case searchPlaceholder, close, noMatches, noMatchesHint, footerHint
         case hotkeySection, currentHotkey, retentionSection, maxItems, maxAgeDays, storageCap, languageSection
         case recordNewHotkey, pressNewHotkey, recordingHint, hotkeyHint

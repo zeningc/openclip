@@ -33,6 +33,12 @@ struct MenuBarMenuView: View {
 
             Divider()
 
+            Button(l10n.text(.quit)) {
+                NSApp.terminate(nil)
+            }
+
+            Divider()
+
             Text(l10n.text(.storedItems, store.items.count))
                 .font(.caption)
                 .foregroundStyle(.secondary)

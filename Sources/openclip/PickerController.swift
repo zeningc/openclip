@@ -3,7 +3,7 @@ import Combine
 import SwiftUI
 
 @MainActor
-final class PickerController: ObservableObject {
+final class PickerController: NSObject, ObservableObject, NSWindowDelegate {
     enum Command {
         case moveLeft
         case moveRight
@@ -23,6 +23,7 @@ final class PickerController: ObservableObject {
     private var settingsWindow: NSWindow?
     private var keyMonitor: Any?
     private var previouslyActiveApp: NSRunningApplication?
+    private var isClosingProgrammatically = false
 
     func configure(store: ClipboardStore, preferences: PreferencesStore) {
         self.store = store
@@ -47,8 +48,9 @@ final class PickerController: ObservableObject {
             panel.isFloatingPanel = true
             panel.level = .floating
             panel.collectionBehavior = [.canJoinAllSpaces, .fullScreenAuxiliary]
-            panel.hidesOnDeactivate = false
+            panel.hidesOnDeactivate = true
             panel.isReleasedWhenClosed = false
+            panel.delegate = self
             panel.titleVisibility = .hidden
             panel.titlebarAppearsTransparent = true
             panel.backgroundColor = .windowBackgroundColor
@@ -66,11 +68,13 @@ final class PickerController: ObservableObject {
     }
 
     func closePicker(restoreFocus: Bool = true) {
+        isClosingProgrammatically = true
         removeKeyMonitor()
         window?.orderOut(nil)
         if restoreFocus {
             previouslyActiveApp?.activate(options: [.activateIgnoringOtherApps])
         }
+        isClosingProgrammatically = false
     }
 
     func openSettings(preferences: PreferencesStore? = nil, store: ClipboardStore? = nil) {
@@ -152,5 +156,15 @@ final class PickerController: ObservableObject {
             NSEvent.removeMonitor(keyMonitor)
             self.keyMonitor = nil
         }
+    }
+
+    func windowDidResignKey(_ notification: Notification) {
+        guard window?.isVisible == true, !isClosingProgrammatically else { return }
+        closePicker(restoreFocus: false)
+    }
+
+    func windowDidResignMain(_ notification: Notification) {
+        guard window?.isVisible == true, !isClosingProgrammatically else { return }
+        closePicker(restoreFocus: false)
     }
 }
