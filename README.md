@@ -6,6 +6,8 @@ A lightweight macOS clipboard history app with a bottom-edge picker, keyboard-fi
 
 Repo: https://github.com/zeningc/openclip
 
+![openclip panel](./screenshots/openclip-panel.png)
+
 ## English
 
 ### What is openclip?
@@ -27,6 +29,16 @@ It watches your clipboard, keeps a searchable local history, and lets you quickl
 - UI language option: **English / 中文**
 - Local-only data storage
 
+### Screenshots
+
+#### Picker UI
+
+![openclip picker](./screenshots/openclip-panel.png)
+
+#### Settings
+
+![openclip settings](./screenshots/openclip-settings.png)
+
 ### Installation
 
 #### Run from source
@@ -41,6 +53,10 @@ swift run openclip
 #### Open in Xcode
 
 You can also open the package folder in Xcode and run it as a macOS app target.
+
+### Download app bundle
+
+You can download the prebuilt macOS app zip from the GitHub Releases page.
 
 ### Permissions
 
@@ -85,6 +101,16 @@ openclip 是一个面向 macOS 的轻量级剪贴板历史工具，基于 SwiftU
 - 支持 **英文 / 中文** 界面切换
 - 所有数据仅保存在本地
 
+### 截图
+
+#### 历史面板
+
+![openclip picker zh](./screenshots/openclip-panel.png)
+
+#### 设置界面
+
+![openclip settings zh](./screenshots/openclip-settings.png)
+
 ### 安装方式
 
 #### 从源码运行
@@ -99,6 +125,10 @@ swift run openclip
 #### 用 Xcode 打开
 
 你也可以直接用 Xcode 打开这个 Swift Package，并作为 macOS app 运行。
+
+### 下载应用
+
+你也可以在 GitHub Releases 页面下载预构建的 macOS `.app.zip`。
 
 ### 权限说明
 
