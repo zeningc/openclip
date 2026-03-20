@@ -1,13 +1,15 @@
 # openclip
 
-[English](#english) | [中文说明](#中文说明)
+<p align="center">
+  <img src="./assets/openclip-app-icon.jpg" alt="openclip icon" width="72" />
+</p>
 
-A lightweight macOS clipboard history app with a bottom-edge picker, keyboard-first navigation, and local-only storage.
+<p align="center"><strong>openclip</strong></p>
 
-Repo: https://github.com/zeningc/openclip
+<p align="center">A lightweight macOS clipboard history app with a bottom-edge picker, keyboard-first navigation, and local-only storage.</p>
 
-<p align="left">
-  <img src="./assets/openclip-app-icon.jpg" alt="openclip icon" width="140" />
+<p align="center">
+  <a href="#english">English</a> · <a href="#中文说明">中文说明</a> · <a href="https://github.com/zeningc/openclip/releases/tag/v0.1.0">Download</a>
 </p>
 
 ## English
