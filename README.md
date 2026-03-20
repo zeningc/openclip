@@ -48,13 +48,32 @@ swift build
 swift run openclip
 ```
 
+#### Download app bundle
+
+You can download the prebuilt macOS app zip from the GitHub Releases page.
+
+If macOS says **“openclip is damaged and can’t be opened”**, that usually means the app is unsigned and quarantined by Gatekeeper, not that the app is actually broken.
+
+You can remove the quarantine flag with:
+
+```bash
+xattr -dr com.apple.quarantine /path/to/openclip.app
+```
+
+Example:
+
+```bash
+xattr -dr com.apple.quarantine ~/Downloads/openclip.app
+```
+
+You can also try:
+- Right click the app in Finder
+- Choose **Open**
+- Then confirm **Open** again
+
 #### Open in Xcode
 
 You can also open the package folder in Xcode and run it as a macOS app target.
-
-### Download app bundle
-
-You can download the prebuilt macOS app zip from the GitHub Releases page.
 
 ### Permissions
 
@@ -114,13 +133,32 @@ swift build
 swift run openclip
 ```
 
+#### 下载应用
+
+你也可以在 GitHub Releases 页面下载预构建的 macOS `.app.zip`。
+
+如果 macOS 提示 **“openclip 已损坏，无法打开”**，通常不是程序真的坏了，而是因为这个版本还没有做 Apple 签名 / 公证，被 Gatekeeper 隔离了。
+
+你可以在终端执行：
+
+```bash
+xattr -dr com.apple.quarantine /path/to/openclip.app
+```
+
+例如：
+
+```bash
+xattr -dr com.apple.quarantine ~/Downloads/openclip.app
+```
+
+你也可以尝试：
+- 在 Finder 里右键应用
+- 选择 **打开**
+- 再次确认 **打开**
+
 #### 用 Xcode 打开
 
 你也可以直接用 Xcode 打开这个 Swift Package，并作为 macOS app 运行。
-
-### 下载应用
-
-你也可以在 GitHub Releases 页面下载预构建的 macOS `.app.zip`。
 
 ### 权限说明
 
