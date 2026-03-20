@@ -6,6 +6,8 @@ A lightweight macOS clipboard history app with a bottom-edge picker, keyboard-fi
 
 Repo: https://github.com/zeningc/openclip
 
+![openclip icon](./assets/openclip-app-icon.jpg)
+
 ![openclip panel](./screenshots/openclip-panel.png)
 
 ## English
